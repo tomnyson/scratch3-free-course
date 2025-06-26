@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học Scratch 3 - Lập trình cho trẻ em</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+        }
+        .feature-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .download-btn {
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
+        .scratch-orange {
+            color: #FF6B35;
+        }
+        .scratch-blue {
+            color: #4C97FF;
+        }
+        .scratch-green {
+            color: #59C059;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .curriculum-bg {
+            background: linear-gradient(rgba(76, 151, 255, 0.1), rgba(76, 151, 255, 0.1)), 
+                        url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-cat scratch-orange"></i> Scratch 3</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#curriculum">Chương trình</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#downloads">Tài liệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Khóa học Scratch 3</h1>
+                    <h3 class="mb-4">Lập trình sáng tạo cho trẻ em</h3>
+                    <p class="lead mb-4">
+                        Khám phá thế giới lập trình thông qua Scratch 3 - công cụ lập trình trực quan 
+                        được thiết kế đặc biệt cho trẻ em và người mới bắt đầu.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#about" class="btn btn-light btn-lg">Tìm hiểu thêm</a>
+                        <a href="#downloads" class="btn btn-outline-light btn-lg">Tải tài liệu</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Kids Learning Programming" class="img-fluid rounded shadow" style="max-width: 500px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold scratch-blue">Tại sao chọn Scratch 3?</h2>
+                    <p class="lead">Scratch 3 là phiên bản mới nhất của ngôn ngữ lập trình trực quan phổ biến nhất thế giới</p>
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                         alt="Kids Coding Together" class="img-fluid rounded shadow mb-4" style="max-height: 300px; width: auto;">
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-puzzle-piece fa-3x scratch-orange mb-3"></i>
+                            <h4>Dễ học</h4>
+                            <p>Giao diện kéo thả trực quan, không cần gõ code phức tạp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-gamepad fa-3x scratch-blue mb-3"></i>
+                            <h4>Sáng tạo</h4>
+                            <p>Tạo ra games, animations và interactive stories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <i class="fas fa-users fa-3x scratch-green mb-3"></i>
+                            <h4>Cộng đồng</h4>
+                            <p>Kết nối với hàng triệu người dùng Scratch trên toàn thế giới</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="section-padding curriculum-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold scratch-blue">Chương trình học</h2>
+                    <p class="lead">Từ cơ bản đến nâng cao - học từng bước một cách có hệ thống</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="fas fa-star"></i> Cấp độ cơ bản</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Làm quen với giao diện Scratch 3</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Các khối lệnh cơ bản</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Điều khiển sprite di chuyển</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Tạo animation đơn giản</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Âm thanh và hiệu ứng</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Dự án: Tạo greeting card</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-success text-white">
+                            <h4 class="mb-0"><i class="fas fa-rocket"></i> Cấp độ nâng cao</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Cấu trúc điều kiện và lặp</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Biến và lists</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Tạo functions tùy chỉnh</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Game mechanics</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Collision detection</li>
+                                <li class="mb-2"><i class="fas fa-check text-success"></i> Dự án: Tạo platformer game</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold scratch-blue">Tải tài liệu học tập</h2>
+                    <p class="lead">Tất cả tài liệu cần thiết cho khóa học Scratch 3</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-center download-btn">
+                        <div class="card-body p-4">
+                            <i class="fas fa-book fa-3x scratch-orange mb-3"></i>
+                            <h5>Sách hướng dẫn</h5>
+                            <p>Lộ trình 12 bài học Scratch chi tiết từ cơ bản đến nâng cao</p>
+                            <a href="https://docs.google.com/document/d/1BN2evnm60iTmV_3lOV2CVEoUeisHYh_WW6cJwLzR-Qk/edit?usp=sharing" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-download"></i> Xem tài liệu
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-center download-btn">
+                        <div class="card-body p-4">
+                            <i class="fas fa-code fa-3x scratch-blue mb-3"></i>
+                            <h5>Mã nguồn dự án</h5>
+                            <p>File .sb3 của các dự án mẫu trong khóa học</p>
+                            <a href="https://scratch.mit.edu/projects/" target="_blank" class="btn btn-success">
+                                <i class="fas fa-download"></i> Tải xuống
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-center download-btn">
+                        <div class="card-body p-4">
+                            <i class="fas fa-images fa-3x scratch-green mb-3"></i>
+                            <h5>Sprites & Backgrounds</h5>
+                            <p>Thư viện assets cho dự án Flappy Bird và các game khác</p>
+                            <a href="https://drive.google.com/drive/folders/1riWPitXw9rpYfzqcdlwrDAh9rp1fK_7h?usp=sharing" target="_blank" class="btn btn-warning">
+                                <i class="fas fa-download"></i> Tải xuống
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-center download-btn">
+                        <div class="card-body p-4">
+                            <i class="fas fa-video fa-3x text-danger mb-3"></i>
+                            <h5>Video tutorials</h5>
+                            <p>Playlist video hướng dẫn chi tiết từng bài học</p>
+                            <a href="https://www.youtube.com/results?search_query=scratch+3+tutorial" target="_blank" class="btn btn-danger">
+                                <i class="fas fa-play"></i> Xem video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-center download-btn">
+                        <div class="card-body p-4">
+                            <i class="fas fa-download fa-3x text-info mb-3"></i>
+                            <h5>Scratch 3 Desktop</h5>
+                            <p>Tải ứng dụng Scratch 3 để sử dụng offline</p>
+                            <a href="https://scratch.mit.edu/download" target="_blank" class="btn btn-info">
+                                <i class="fas fa-download"></i> Tải ứng dụng
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-center download-btn">
+                        <div class="card-body p-4">
+                            <i class="fas fa-certificate fa-3x text-purple mb-3"></i>
+                            <h5>Chứng chỉ</h5>
+                            <p>Template chứng chỉ hoàn thành khóa học</p>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fas fa-download"></i> Tải xuống
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="display-6 fw-bold scratch-blue mb-4">Tính năng mới trong Scratch 3</h2>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-mobile-alt fa-2x scratch-orange"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5>Hỗ trợ tablet</h5>
+                                    <p>Chạy mượt mà trên tablet và thiết bị cảm ứng</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-microphone fa-2x scratch-blue"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5>Text-to-Speech</h5>
+                                    <p>Tích hợp khả năng chuyển text thành giọng nói</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <i class="fas fa-language fa-2x scratch-green"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5>Dịch thuật</h5>
+                                    <p>Translate blocks để dịch text giữa các ngôn ngữ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Programming Interface" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="display-5 fw-bold mb-4">Liên hệ với chúng tôi</h2>
+                    <p class="lead mb-5">Có câu hỏi về khóa học? Chúng tôi sẵn sàng hỗ trợ!</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 mb-3">
+                            <i class="fas fa-envelope fa-2x scratch-orange mb-3"></i>
+                            <h5>Email</h5>
+                            <p>tabletkindfire@gmail.com</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <i class="fas fa-phone fa-2x scratch-blue mb-3"></i>
+                            <h5>Điện thoại</h5>
+                            <p>0349528472</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x scratch-green mb-3"></i>
+                            <h5>Địa chỉ</h5>
+                            <p>Cao đẳng FPT Tây Nguyên</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Khóa học Scratch 3. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://scratch.mit.edu" target="_blank" class="text-white me-3">
+                        <i class="fab fa-scratch"></i> Scratch Official
+                    </a>
+                    <a href="#" class="text-white me-3">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-white me-3">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
