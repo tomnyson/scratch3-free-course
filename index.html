@@ -45,6 +45,51 @@
             background-position: center;
             background-attachment: fixed;
         }
+        .floating-chat-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .floating-btn .btn {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .floating-btn .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+        }
+        .zalo-btn {
+            animation: pulse-zalo 2s infinite;
+        }
+        .zalo-btn .btn {
+            background: linear-gradient(45deg, #0068ff, #0099ff);
+        }
+        .messenger-btn {
+            animation: pulse-messenger 2s infinite 1s;
+        }
+        .messenger-btn .btn {
+            background: linear-gradient(45deg, #0084ff, #44bec7);
+        }
+        @keyframes pulse-zalo {
+            0% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 104, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 104, 255, 0); }
+        }
+        @keyframes pulse-messenger {
+            0% { box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 132, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 132, 255, 0); }
+        }
     </style>
 </head>
 <body>
@@ -321,7 +366,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1515378791036-0648a814c963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*356zWDYXZyGbmQxa." 
                          alt="Programming Interface" class="img-fluid rounded shadow">
                 </div>
             </div>
@@ -336,17 +381,22 @@
                     <h2 class="display-5 fw-bold mb-4">Liên hệ với chúng tôi</h2>
                     <p class="lead mb-5">Có câu hỏi về khóa học? Chúng tôi sẵn sàng hỗ trợ!</p>
                     <div class="row justify-content-center">
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-3 mb-3">
                             <i class="fas fa-envelope fa-2x scratch-orange mb-3"></i>
                             <h5>Email</h5>
                             <p>tabletkindfire@gmail.com</p>
                         </div>
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-3 mb-3">
                             <i class="fas fa-phone fa-2x scratch-blue mb-3"></i>
                             <h5>Điện thoại</h5>
                             <p>0349528472</p>
                         </div>
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-3 mb-3">
+                            <i class="fas fa-comments fa-2x text-info mb-3"></i>
+                            <h5>Zalo</h5>
+                            <p>0349528472</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
                             <i class="fas fa-map-marker-alt fa-2x scratch-green mb-3"></i>
                             <h5>Địa chỉ</h5>
                             <p>Cao đẳng FPT Tây Nguyên</p>
@@ -368,19 +418,64 @@
                     <a href="https://scratch.mit.edu" target="_blank" class="text-white me-3">
                         <i class="fab fa-scratch"></i> Scratch Official
                     </a>
-                    <a href="#" class="text-white me-3">
-                        <i class="fab fa-facebook"></i>
+                    <a href="https://www.facebook.com/edukidstaynguyen" target="_blank" class="text-white me-3" title="Facebook Group">
+                        <i class="fab fa-facebook"></i> Facebook
                     </a>
-                    <a href="#" class="text-white me-3">
+                    <a href="#" class="text-white me-3" title="YouTube Channel">
                         <i class="fab fa-youtube"></i>
                     </a>
-                    <a href="#" class="text-white">
+                    <a href="#" class="text-white" title="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Facebook Messenger Chat -->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <!-- Facebook SDK -->
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "edukidstaynguyen");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Floating Chat Buttons -->
+    <div class="floating-chat-buttons">
+        <!-- Zalo Button -->
+        <div class="floating-btn zalo-btn">
+            <a href="https://zalo.me/0349528472" target="_blank" class="btn rounded-circle" 
+               title="Chat Zalo: 0349528472" data-bs-toggle="tooltip" data-bs-placement="left">
+                <i class="fas fa-comments fa-2x text-white"></i>
+            </a>
+        </div>
+        <!-- Messenger Button -->
+        <div class="floating-btn messenger-btn">
+            <a href="https://m.me/edukidstaynguyen" target="_blank" class="btn rounded-circle" 
+               title="Chat Messenger" data-bs-toggle="tooltip" data-bs-placement="left">
+                <i class="fab fa-facebook-messenger fa-2x text-white"></i>
+            </a>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -398,6 +493,12 @@
                     });
                 }
             });
+        });
+
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
         });
     </script>
 </body>
